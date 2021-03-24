@@ -1,0 +1,855 @@
+SearchBayesianSkopt: Config 0 Exception. Config: {'learning_rate': 0.0860791602756938, 'nnz': 0.02430828078713488, 'knn': 702} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 272, in _evaluate_on_validation
+    result_dict, _ = self.evaluator_validation.evaluateRecommender(recommender_instance)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\Base\Evaluation\Evaluator.py", line 245, in evaluateRecommender
+    results_dict = self._run_evaluation_on_selected_users(recommender_object, self.users_to_evaluate)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\Base\Evaluation\Evaluator.py", line 449, in _run_evaluation_on_selected_users
+    return_scores = True
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\Base\BaseRecommender.py", line 78, in recommend
+    scores_batch = self._compute_item_score(user_id_array, items_to_compute=items_to_compute)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\Base\BaseRecommender.py", line 51, in _compute_item_score
+    item_scores = user_profile_array.dot(self.W_sparse).toarray()
+AttributeError: 'SlimBPRRec' object has no attribute 'W_sparse'
+
+SearchBayesianSkopt: New best config found. Config 0: {'learning_rate': 0.024435601597562546, 'nnz': 1.6387276147667915, 'knn': 1011} - results: ROC_AUC: 0.0497211, PRECISION: 0.0090674, PRECISION_RECALL_MIN_DEN: 0.0487167, RECALL: 0.0483636, MAP: 0.0201014, MRR: 0.0333807, NDCG: 0.0300121, F1: 0.0152716, HIT_RATE: 0.0906741, ARHR: 0.0347289, NOVELTY: 0.0051482, AVERAGE_POPULARITY: 0.0514497, DIVERSITY_MEAN_INTER_LIST: 0.9961259, DIVERSITY_HERFINDAHL: 0.9995911, COVERAGE_ITEM: 0.4301444, COVERAGE_ITEM_CORRECT: 0.0138595, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0483201, DIVERSITY_GINI: 0.1810958, SHANNON_ENTROPY: 12.4053581, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'learning_rate': 0.024435601597562546, 'nnz': 1.6387276147667915, 'knn': 1011} - results:
+CUTOFF: 10 - ROC_AUC: 0.0610205, PRECISION: 0.0109846, PRECISION_RECALL_MIN_DEN: 0.0499158, RECALL: 0.0493113, MAP: 0.0207997, MRR: 0.0401194, NDCG: 0.0321559, F1: 0.0179669, HIT_RATE: 0.1098462, ARHR: 0.0423450, NOVELTY: 0.0051528, AVERAGE_POPULARITY: 0.0511850, DIVERSITY_MEAN_INTER_LIST: 0.9961416, DIVERSITY_HERFINDAHL: 0.9995943, COVERAGE_ITEM: 0.4407315, COVERAGE_ITEM_CORRECT: 0.0175938, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.0611552, DIVERSITY_GINI: 0.1829668, SHANNON_ENTROPY: 12.4229051, 
+
+SearchBayesianSkopt: Config 1 is suboptimal. Config: {'learning_rate': 0.044788366274468416, 'nnz': 1.4148704444093263, 'knn': 2} - results: ROC_AUC: 0.0322294, PRECISION: 0.0056429, PRECISION_RECALL_MIN_DEN: 0.0310199, RECALL: 0.0307423, MAP: 0.0126699, MRR: 0.0217933, NDCG: 0.0189604, F1: 0.0095355, HIT_RATE: 0.0564290, ARHR: 0.0224959, NOVELTY: 0.0051076, AVERAGE_POPULARITY: 0.0553595, DIVERSITY_MEAN_INTER_LIST: 0.9947541, DIVERSITY_HERFINDAHL: 0.9994540, COVERAGE_ITEM: 0.4281809, COVERAGE_ITEM_CORRECT: 0.0093167, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0308292, DIVERSITY_GINI: 0.1717092, SHANNON_ENTROPY: 12.2315149, 
+SearchBayesianSkopt: Config 2 is suboptimal. Config: {'learning_rate': 0.09074870356335413, 'nnz': 1.3556850095660864, 'knn': 1359} - results: ROC_AUC: 0.0221782, PRECISION: 0.0042860, PRECISION_RECALL_MIN_DEN: 0.0208796, RECALL: 0.0204885, MAP: 0.0071896, MRR: 0.0141426, NDCG: 0.0117862, F1: 0.0070891, HIT_RATE: 0.0428602, ARHR: 0.0145454, NOVELTY: 0.0050880, AVERAGE_POPULARITY: 0.0606201, DIVERSITY_MEAN_INTER_LIST: 0.9942097, DIVERSITY_HERFINDAHL: 0.9993996, COVERAGE_ITEM: 0.4097401, COVERAGE_ITEM_CORRECT: 0.0071222, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0234051, DIVERSITY_GINI: 0.1569068, SHANNON_ENTROPY: 12.0803453, 
+SearchBayesianSkopt: Config 3 is suboptimal. Config: {'learning_rate': 0.052722234401570006, 'nnz': 1.6730846170593359, 'knn': 908} - results: ROC_AUC: 0.0298194, PRECISION: 0.0054921, PRECISION_RECALL_MIN_DEN: 0.0263312, RECALL: 0.0259339, MAP: 0.0103795, MRR: 0.0192896, NDCG: 0.0161616, F1: 0.0090646, HIT_RATE: 0.0549214, ARHR: 0.0201447, NOVELTY: 0.0050784, AVERAGE_POPULARITY: 0.0588263, DIVERSITY_MEAN_INTER_LIST: 0.9949982, DIVERSITY_HERFINDAHL: 0.9994784, COVERAGE_ITEM: 0.4221752, COVERAGE_ITEM_CORRECT: 0.0091627, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0293192, DIVERSITY_GINI: 0.1639833, SHANNON_ENTROPY: 12.1684435, 
+SearchBayesianSkopt: New best config found. Config 4: {'learning_rate': 0.00214168231523243, 'nnz': 1.1629264204468084, 'knn': 654} - results: ROC_AUC: 0.1102987, PRECISION: 0.0206547, PRECISION_RECALL_MIN_DEN: 0.0888128, RECALL: 0.0870554, MAP: 0.0393512, MRR: 0.0758953, NDCG: 0.0590598, F1: 0.0333879, HIT_RATE: 0.2065475, ARHR: 0.0820940, NOVELTY: 0.0049061, AVERAGE_POPULARITY: 0.1048288, DIVERSITY_MEAN_INTER_LIST: 0.9855278, DIVERSITY_HERFINDAHL: 0.9985316, COVERAGE_ITEM: 0.3756689, COVERAGE_ITEM_CORRECT: 0.0201732, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1016736, DIVERSITY_GINI: 0.1301187, SHANNON_ENTROPY: 11.5005446, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'learning_rate': 0.00214168231523243, 'nnz': 1.1629264204468084, 'knn': 654} - results:
+CUTOFF: 10 - ROC_AUC: 0.1110835, PRECISION: 0.0222289, PRECISION_RECALL_MIN_DEN: 0.0847961, RECALL: 0.0828799, MAP: 0.0364885, MRR: 0.0800510, NDCG: 0.0572125, F1: 0.0350556, HIT_RATE: 0.2222888, ARHR: 0.0881125, NOVELTY: 0.0049106, AVERAGE_POPULARITY: 0.1038459, DIVERSITY_MEAN_INTER_LIST: 0.9858347, DIVERSITY_HERFINDAHL: 0.9985638, COVERAGE_ITEM: 0.3895284, COVERAGE_ITEM_CORRECT: 0.0237151, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1150120, DIVERSITY_GINI: 0.1333824, SHANNON_ENTROPY: 11.5412687, 
+
+SearchBayesianSkopt: Config 5 is suboptimal. Config: {'learning_rate': 0.04381482433482961, 'nnz': 0.5353395874866828, 'knn': 1100} - results: ROC_AUC: 0.0600319, PRECISION: 0.0108335, PRECISION_RECALL_MIN_DEN: 0.0560557, RECALL: 0.0555364, MAP: 0.0239917, MRR: 0.0409822, NDCG: 0.0355029, F1: 0.0181303, HIT_RATE: 0.1083351, ARHR: 0.0427338, NOVELTY: 0.0051000, AVERAGE_POPULARITY: 0.0587663, DIVERSITY_MEAN_INTER_LIST: 0.9952261, DIVERSITY_HERFINDAHL: 0.9995012, COVERAGE_ITEM: 0.4178248, COVERAGE_ITEM_CORRECT: 0.0152839, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0573801, DIVERSITY_GINI: 0.1687301, SHANNON_ENTROPY: 12.2531377, 
+SearchBayesianSkopt: Config 6 is suboptimal. Config: {'learning_rate': 0.04345290421259549, 'nnz': 0.28169482020436437, 'knn': 575} - results: ROC_AUC: 0.0822556, PRECISION: 0.0148826, PRECISION_RECALL_MIN_DEN: 0.0691319, RECALL: 0.0681141, MAP: 0.0297876, MRR: 0.0554361, NDCG: 0.0448433, F1: 0.0244279, HIT_RATE: 0.1488262, ARHR: 0.0584029, NOVELTY: 0.0050693, AVERAGE_POPULARITY: 0.0697450, DIVERSITY_MEAN_INTER_LIST: 0.9938193, DIVERSITY_HERFINDAHL: 0.9993605, COVERAGE_ITEM: 0.3863715, COVERAGE_ITEM_CORRECT: 0.0187103, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0768844, DIVERSITY_GINI: 0.1481211, SHANNON_ENTROPY: 12.0190968, 
+SearchBayesianSkopt: Config 7 is suboptimal. Config: {'learning_rate': 0.08488758880017419, 'nnz': 1.3311505206319112, 'knn': 1118} - results: ROC_AUC: 0.0269522, PRECISION: 0.0045229, PRECISION_RECALL_MIN_DEN: 0.0213472, RECALL: 0.0210374, MAP: 0.0088555, MRR: 0.0167220, NDCG: 0.0136009, F1: 0.0074452, HIT_RATE: 0.0452294, ARHR: 0.0169176, NOVELTY: 0.0050345, AVERAGE_POPULARITY: 0.0652189, DIVERSITY_MEAN_INTER_LIST: 0.9934282, DIVERSITY_HERFINDAHL: 0.9993214, COVERAGE_ITEM: 0.4103561, COVERAGE_ITEM_CORRECT: 0.0073147, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0256701, DIVERSITY_GINI: 0.1550551, SHANNON_ENTROPY: 12.0199547, 
+SearchBayesianSkopt: Config 8 is suboptimal. Config: {'learning_rate': 0.06142590414298649, 'nnz': 1.1282940080542643, 'knn': 1458} - results: ROC_AUC: 0.0296414, PRECISION: 0.0052337, PRECISION_RECALL_MIN_DEN: 0.0256367, RECALL: 0.0253011, MAP: 0.0105476, MRR: 0.0192454, NDCG: 0.0160610, F1: 0.0086733, HIT_RATE: 0.0523369, ARHR: 0.0202220, NOVELTY: 0.0050920, AVERAGE_POPULARITY: 0.0565970, DIVERSITY_MEAN_INTER_LIST: 0.9954275, DIVERSITY_HERFINDAHL: 0.9995213, COVERAGE_ITEM: 0.4187103, COVERAGE_ITEM_CORRECT: 0.0085852, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0274317, DIVERSITY_GINI: 0.1649261, SHANNON_ENTROPY: 12.2139571, 
+SearchBayesianSkopt: Config 9 is suboptimal. Config: {'learning_rate': 0.06799491365494116, 'nnz': 0.680499831586323, 'knn': 1078} - results: ROC_AUC: 0.0330479, PRECISION: 0.0061167, PRECISION_RECALL_MIN_DEN: 0.0322004, RECALL: 0.0318180, MAP: 0.0128291, MRR: 0.0223800, NDCG: 0.0194342, F1: 0.0102609, HIT_RATE: 0.0611673, ARHR: 0.0233308, NOVELTY: 0.0050906, AVERAGE_POPULARITY: 0.0579624, DIVERSITY_MEAN_INTER_LIST: 0.9954234, DIVERSITY_HERFINDAHL: 0.9995209, COVERAGE_ITEM: 0.4341867, COVERAGE_ITEM_CORRECT: 0.0101636, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0325909, DIVERSITY_GINI: 0.1756818, SHANNON_ENTROPY: 12.2872515, 
+SearchBayesianSkopt: Config 10 is suboptimal. Config: {'learning_rate': 0.09778088011761893, 'nnz': 1.7247349521300699, 'knn': 1578} - results: ROC_AUC: 0.0227538, PRECISION: 0.0039845, PRECISION_RECALL_MIN_DEN: 0.0186055, RECALL: 0.0184016, MAP: 0.0073038, MRR: 0.0147075, NDCG: 0.0116391, F1: 0.0065506, HIT_RATE: 0.0398449, ARHR: 0.0154070, NOVELTY: 0.0050550, AVERAGE_POPULARITY: 0.0637790, DIVERSITY_MEAN_INTER_LIST: 0.9941528, DIVERSITY_HERFINDAHL: 0.9993939, COVERAGE_ITEM: 0.4051588, COVERAGE_ITEM_CORRECT: 0.0060443, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0213917, DIVERSITY_GINI: 0.1512609, SHANNON_ENTROPY: 12.0176261, 
+SearchBayesianSkopt: Config 11 is suboptimal. Config: {'learning_rate': 0.08776794748427419, 'nnz': 1.3530105694243235, 'knn': 1625} - results: ROC_AUC: 0.0254550, PRECISION: 0.0044152, PRECISION_RECALL_MIN_DEN: 0.0201590, RECALL: 0.0198305, MAP: 0.0080957, MRR: 0.0157543, NDCG: 0.0126918, F1: 0.0072224, HIT_RATE: 0.0441525, ARHR: 0.0163191, NOVELTY: 0.0050734, AVERAGE_POPULARITY: 0.0609550, DIVERSITY_MEAN_INTER_LIST: 0.9948795, DIVERSITY_HERFINDAHL: 0.9994665, COVERAGE_ITEM: 0.4143985, COVERAGE_ITEM_CORRECT: 0.0073532, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0241601, DIVERSITY_GINI: 0.1612400, SHANNON_ENTROPY: 12.1536008, 
+SearchBayesianSkopt: Config 12 is suboptimal. Config: {'learning_rate': 0.004855633013453532, 'nnz': 1.4350987072452641, 'knn': 1271} - results: ROC_AUC: 0.0990113, PRECISION: 0.0184579, PRECISION_RECALL_MIN_DEN: 0.0802167, RECALL: 0.0786274, MAP: 0.0355372, MRR: 0.0688568, NDCG: 0.0532747, F1: 0.0298973, HIT_RATE: 0.1845789, ARHR: 0.0743116, NOVELTY: 0.0050332, AVERAGE_POPULARITY: 0.0825232, DIVERSITY_MEAN_INTER_LIST: 0.9910571, DIVERSITY_HERFINDAHL: 0.9990844, COVERAGE_ITEM: 0.3831761, COVERAGE_ITEM_CORRECT: 0.0195573, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0912294, DIVERSITY_GINI: 0.1421013, SHANNON_ENTROPY: 11.8298939, 
+SearchBayesianSkopt: Config 13 is suboptimal. Config: {'learning_rate': 0.07251760250727975, 'nnz': 1.4344371570476433, 'knn': 342} - results: ROC_AUC: 0.0262736, PRECISION: 0.0046306, PRECISION_RECALL_MIN_DEN: 0.0229631, RECALL: 0.0226000, MAP: 0.0093394, MRR: 0.0165549, NDCG: 0.0141851, F1: 0.0076864, HIT_RATE: 0.0463063, ARHR: 0.0170453, NOVELTY: 0.0050726, AVERAGE_POPULARITY: 0.0618423, DIVERSITY_MEAN_INTER_LIST: 0.9938266, DIVERSITY_HERFINDAHL: 0.9993613, COVERAGE_ITEM: 0.4178633, COVERAGE_ITEM_CORRECT: 0.0076227, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0254184, DIVERSITY_GINI: 0.1582471, SHANNON_ENTROPY: 12.0628230, 
+SearchBayesianSkopt: Config 14 is suboptimal. Config: {'learning_rate': 0.023207141743253053, 'nnz': 1.35856800163935, 'knn': 1528} - results: ROC_AUC: 0.0639238, PRECISION: 0.0110274, PRECISION_RECALL_MIN_DEN: 0.0559097, RECALL: 0.0552105, MAP: 0.0245306, MRR: 0.0438059, NDCG: 0.0361253, F1: 0.0183830, HIT_RATE: 0.1102735, ARHR: 0.0453961, NOVELTY: 0.0051426, AVERAGE_POPULARITY: 0.0542709, DIVERSITY_MEAN_INTER_LIST: 0.9960038, DIVERSITY_HERFINDAHL: 0.9995789, COVERAGE_ITEM: 0.4242926, COVERAGE_ITEM_CORRECT: 0.0157459, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0590160, DIVERSITY_GINI: 0.1781915, SHANNON_ENTROPY: 12.3744346, 
+SearchBayesianSkopt: Config 15 is suboptimal. Config: {'learning_rate': 0.032829695423168055, 'nnz': 0.36982576918787463, 'knn': 1185} - results: ROC_AUC: 0.0863013, PRECISION: 0.0152703, PRECISION_RECALL_MIN_DEN: 0.0695674, RECALL: 0.0684462, MAP: 0.0308381, MRR: 0.0603108, NDCG: 0.0461242, F1: 0.0249698, HIT_RATE: 0.1527030, ARHR: 0.0636968, NOVELTY: 0.0050696, AVERAGE_POPULARITY: 0.0714424, DIVERSITY_MEAN_INTER_LIST: 0.9933224, DIVERSITY_HERFINDAHL: 0.9993108, COVERAGE_ITEM: 0.3846776, COVERAGE_ITEM_CORRECT: 0.0184023, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0790235, DIVERSITY_GINI: 0.1462205, SHANNON_ENTROPY: 11.9766063, 
+SearchBayesianSkopt: Config 16 is suboptimal. Config: {'learning_rate': 0.053428144068734855, 'nnz': 0.9018822924508434, 'knn': 776} - results: ROC_AUC: 0.0371939, PRECISION: 0.0066336, PRECISION_RECALL_MIN_DEN: 0.0353288, RECALL: 0.0348534, MAP: 0.0137497, MRR: 0.0243692, NDCG: 0.0210562, F1: 0.0111459, HIT_RATE: 0.0663364, ARHR: 0.0251815, NOVELTY: 0.0051090, AVERAGE_POPULARITY: 0.0553466, DIVERSITY_MEAN_INTER_LIST: 0.9956955, DIVERSITY_HERFINDAHL: 0.9995481, COVERAGE_ITEM: 0.4288354, COVERAGE_ITEM_CORRECT: 0.0105871, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0359884, DIVERSITY_GINI: 0.1722385, SHANNON_ENTROPY: 12.2865945, 
+SearchBayesianSkopt: Config 17 is suboptimal. Config: {'learning_rate': 0.040059142379366, 'nnz': 1.7624957009190272, 'knn': 802} - results: ROC_AUC: 0.0323945, PRECISION: 0.0057937, PRECISION_RECALL_MIN_DEN: 0.0313787, RECALL: 0.0309505, MAP: 0.0123674, MRR: 0.0210197, NDCG: 0.0187869, F1: 0.0097603, HIT_RATE: 0.0579367, ARHR: 0.0215031, NOVELTY: 0.0050922, AVERAGE_POPULARITY: 0.0558754, DIVERSITY_MEAN_INTER_LIST: 0.9949192, DIVERSITY_HERFINDAHL: 0.9994705, COVERAGE_ITEM: 0.4291819, COVERAGE_ITEM_CORRECT: 0.0095091, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0322134, DIVERSITY_GINI: 0.1688357, SHANNON_ENTROPY: 12.2032533, 
+SearchBayesianSkopt: Config 18 is suboptimal. Config: {'learning_rate': 0.059096860316615644, 'nnz': 1.9574326198686416, 'knn': 1886} - results: ROC_AUC: 0.0243182, PRECISION: 0.0043937, PRECISION_RECALL_MIN_DEN: 0.0229098, RECALL: 0.0225913, MAP: 0.0088970, MRR: 0.0160747, NDCG: 0.0136567, F1: 0.0073567, HIT_RATE: 0.0439371, ARHR: 0.0165935, NOVELTY: 0.0050822, AVERAGE_POPULARITY: 0.0598403, DIVERSITY_MEAN_INTER_LIST: 0.9946110, DIVERSITY_HERFINDAHL: 0.9994397, COVERAGE_ITEM: 0.4149374, COVERAGE_ITEM_CORRECT: 0.0073917, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0235309, DIVERSITY_GINI: 0.1574130, SHANNON_ENTROPY: 12.0893238, 
+SearchBayesianSkopt: Config 19 is suboptimal. Config: {'learning_rate': 0.08900238350714074, 'nnz': 1.8983537588357053, 'knn': 320} - results: ROC_AUC: 0.0243903, PRECISION: 0.0043722, PRECISION_RECALL_MIN_DEN: 0.0197969, RECALL: 0.0193956, MAP: 0.0081328, MRR: 0.0160127, NDCG: 0.0125061, F1: 0.0071358, HIT_RATE: 0.0437217, ARHR: 0.0164248, NOVELTY: 0.0050346, AVERAGE_POPULARITY: 0.0650964, DIVERSITY_MEAN_INTER_LIST: 0.9935364, DIVERSITY_HERFINDAHL: 0.9993322, COVERAGE_ITEM: 0.4010780, COVERAGE_ITEM_CORRECT: 0.0071607, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0237826, DIVERSITY_GINI: 0.1474025, SHANNON_ENTROPY: 11.9583642, 
+SearchBayesianSkopt: Config 20 is suboptimal. Config: {'learning_rate': 0.03890116234364134, 'nnz': 0.8008508987953318, 'knn': 1878} - results: ROC_AUC: 0.0487637, PRECISION: 0.0086582, PRECISION_RECALL_MIN_DEN: 0.0480073, RECALL: 0.0476159, MAP: 0.0198463, MRR: 0.0325379, NDCG: 0.0294979, F1: 0.0146521, HIT_RATE: 0.0865820, ARHR: 0.0335008, NOVELTY: 0.0051110, AVERAGE_POPULARITY: 0.0544961, DIVERSITY_MEAN_INTER_LIST: 0.9951337, DIVERSITY_HERFINDAHL: 0.9994919, COVERAGE_ITEM: 0.4214052, COVERAGE_ITEM_CORRECT: 0.0133590, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0469360, DIVERSITY_GINI: 0.1702764, SHANNON_ENTROPY: 12.2508019, 
+SearchBayesianSkopt: Config 21 is suboptimal. Config: {'learning_rate': 0.08765667609567271, 'nnz': 0.0898944008703735, 'knn': 1255} - results: ROC_AUC: 0.0843021, PRECISION: 0.0157657, PRECISION_RECALL_MIN_DEN: 0.0714816, RECALL: 0.0702822, MAP: 0.0306118, MRR: 0.0582543, NDCG: 0.0463112, F1: 0.0257542, HIT_RATE: 0.1576567, ARHR: 0.0617088, NOVELTY: 0.0049975, AVERAGE_POPULARITY: 0.0809893, DIVERSITY_MEAN_INTER_LIST: 0.9912658, DIVERSITY_HERFINDAHL: 0.9991052, COVERAGE_ITEM: 0.3737055, COVERAGE_ITEM_CORRECT: 0.0187873, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0805335, DIVERSITY_GINI: 0.1337904, SHANNON_ENTROPY: 11.7620501, 
+SearchBayesianSkopt: Config 22 is suboptimal. Config: {'learning_rate': 0.08442838385927326, 'nnz': 1.4081726881658294, 'knn': 98} - results: ROC_AUC: 0.0239570, PRECISION: 0.0042860, PRECISION_RECALL_MIN_DEN: 0.0207187, RECALL: 0.0204065, MAP: 0.0084887, MRR: 0.0159733, NDCG: 0.0129869, F1: 0.0070841, HIT_RATE: 0.0428602, ARHR: 0.0166468, NOVELTY: 0.0050783, AVERAGE_POPULARITY: 0.0605962, DIVERSITY_MEAN_INTER_LIST: 0.9944418, DIVERSITY_HERFINDAHL: 0.9994228, COVERAGE_ITEM: 0.4134745, COVERAGE_ITEM_CORRECT: 0.0068142, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0230276, DIVERSITY_GINI: 0.1594083, SHANNON_ENTROPY: 12.1060599, 
+SearchBayesianSkopt: Config 23 is suboptimal. Config: {'learning_rate': 0.020582527324122142, 'nnz': 1.8822565167444436, 'knn': 226} - results: ROC_AUC: 0.0570882, PRECISION: 0.0100366, PRECISION_RECALL_MIN_DEN: 0.0535917, RECALL: 0.0531409, MAP: 0.0223286, MRR: 0.0383677, NDCG: 0.0333992, F1: 0.0168843, HIT_RATE: 0.1003661, ARHR: 0.0396511, NOVELTY: 0.0051589, AVERAGE_POPULARITY: 0.0516342, DIVERSITY_MEAN_INTER_LIST: 0.9961945, DIVERSITY_HERFINDAHL: 0.9995980, COVERAGE_ITEM: 0.4287969, COVERAGE_ITEM_CORRECT: 0.0145525, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0542343, DIVERSITY_GINI: 0.1798305, SHANNON_ENTROPY: 12.3947694, 
+SearchBayesianSkopt: Config 24 is suboptimal. Config: {'learning_rate': 0.034704023848950535, 'nnz': 1.542847997588405, 'knn': 1845} - results: ROC_AUC: 0.0383125, PRECISION: 0.0063106, PRECISION_RECALL_MIN_DEN: 0.0366754, RECALL: 0.0363741, MAP: 0.0157024, MRR: 0.0253775, NDCG: 0.0228321, F1: 0.0107552, HIT_RATE: 0.0631058, ARHR: 0.0258536, NOVELTY: 0.0051170, AVERAGE_POPULARITY: 0.0527761, DIVERSITY_MEAN_INTER_LIST: 0.9955668, DIVERSITY_HERFINDAHL: 0.9995352, COVERAGE_ITEM: 0.4275265, COVERAGE_ITEM_CORRECT: 0.0099326, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0352334, DIVERSITY_GINI: 0.1739429, SHANNON_ENTROPY: 12.3082551, 
+SearchBayesianSkopt: Config 25 is suboptimal. Config: {'learning_rate': 0.039985925245871426, 'nnz': 1.873731986454859, 'knn': 561} - results: ROC_AUC: 0.0320676, PRECISION: 0.0056860, PRECISION_RECALL_MIN_DEN: 0.0320417, RECALL: 0.0317692, MAP: 0.0133228, MRR: 0.0223673, NDCG: 0.0196914, F1: 0.0096456, HIT_RATE: 0.0568598, ARHR: 0.0229301, NOVELTY: 0.0050997, AVERAGE_POPULARITY: 0.0567876, DIVERSITY_MEAN_INTER_LIST: 0.9951705, DIVERSITY_HERFINDAHL: 0.9994956, COVERAGE_ITEM: 0.4275650, COVERAGE_ITEM_CORRECT: 0.0090857, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0309551, DIVERSITY_GINI: 0.1713068, SHANNON_ENTROPY: 12.2469897, 
+SearchBayesianSkopt: Config 26 is suboptimal. Config: {'learning_rate': 0.006591061835997282, 'nnz': 1.8588229129322376, 'knn': 630} - results: ROC_AUC: 0.0898917, PRECISION: 0.0168210, PRECISION_RECALL_MIN_DEN: 0.0745947, RECALL: 0.0731254, MAP: 0.0326671, MRR: 0.0629031, NDCG: 0.0489933, F1: 0.0273506, HIT_RATE: 0.1682102, ARHR: 0.0675654, NOVELTY: 0.0051130, AVERAGE_POPULARITY: 0.0687113, DIVERSITY_MEAN_INTER_LIST: 0.9934412, DIVERSITY_HERFINDAHL: 0.9993227, COVERAGE_ITEM: 0.3898364, COVERAGE_ITEM_CORRECT: 0.0191723, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0841827, DIVERSITY_GINI: 0.1505809, SHANNON_ENTROPY: 12.0122557, 
+SearchBayesianSkopt: Config 27 is suboptimal. Config: {'learning_rate': 0.09601631276262373, 'nnz': 1.6164052506988857, 'knn': 1233} - results: ROC_AUC: 0.0259204, PRECISION: 0.0043937, PRECISION_RECALL_MIN_DEN: 0.0201957, RECALL: 0.0197694, MAP: 0.0083344, MRR: 0.0170356, NDCG: 0.0128111, F1: 0.0071896, HIT_RATE: 0.0439371, ARHR: 0.0176774, NOVELTY: 0.0050694, AVERAGE_POPULARITY: 0.0622997, DIVERSITY_MEAN_INTER_LIST: 0.9945084, DIVERSITY_HERFINDAHL: 0.9994294, COVERAGE_ITEM: 0.4051973, COVERAGE_ITEM_CORRECT: 0.0070452, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0239084, DIVERSITY_GINI: 0.1527194, SHANNON_ENTROPY: 12.0621833, 
+SearchBayesianSkopt: Config 28 is suboptimal. Config: {'learning_rate': 0.0478913631748695, 'nnz': 1.6741769271026206, 'knn': 1660} - results: ROC_AUC: 0.0284444, PRECISION: 0.0050614, PRECISION_RECALL_MIN_DEN: 0.0276557, RECALL: 0.0273224, MAP: 0.0119865, MRR: 0.0200223, NDCG: 0.0173537, F1: 0.0085406, HIT_RATE: 0.0506138, ARHR: 0.0205771, NOVELTY: 0.0051004, AVERAGE_POPULARITY: 0.0568349, DIVERSITY_MEAN_INTER_LIST: 0.9955856, DIVERSITY_HERFINDAHL: 0.9995371, COVERAGE_ITEM: 0.4313378, COVERAGE_ITEM_CORRECT: 0.0085082, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0275576, DIVERSITY_GINI: 0.1731407, SHANNON_ENTROPY: 12.2868667, 
+SearchBayesianSkopt: Config 29 is suboptimal. Config: {'learning_rate': 0.06421554500811699, 'nnz': 1.9186071633516422, 'knn': 333} - results: ROC_AUC: 0.0263701, PRECISION: 0.0045445, PRECISION_RECALL_MIN_DEN: 0.0233576, RECALL: 0.0230592, MAP: 0.0105902, MRR: 0.0179729, NDCG: 0.0152148, F1: 0.0075926, HIT_RATE: 0.0454448, ARHR: 0.0188956, NOVELTY: 0.0050743, AVERAGE_POPULARITY: 0.0607902, DIVERSITY_MEAN_INTER_LIST: 0.9934563, DIVERSITY_HERFINDAHL: 0.9993242, COVERAGE_ITEM: 0.4180173, COVERAGE_ITEM_CORRECT: 0.0074302, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0237826, DIVERSITY_GINI: 0.1600912, SHANNON_ENTROPY: 12.0601785, 
+SearchBayesianSkopt: Config 30 is suboptimal. Config: {'learning_rate': 0.08292232962284533, 'nnz': 1.223638744567758, 'knn': 1572} - results: ROC_AUC: 0.0267562, PRECISION: 0.0046306, PRECISION_RECALL_MIN_DEN: 0.0231220, RECALL: 0.0227655, MAP: 0.0098959, MRR: 0.0171069, NDCG: 0.0146290, F1: 0.0076959, HIT_RATE: 0.0463063, ARHR: 0.0177095, NOVELTY: 0.0050686, AVERAGE_POPULARITY: 0.0608200, DIVERSITY_MEAN_INTER_LIST: 0.9946986, DIVERSITY_HERFINDAHL: 0.9994484, COVERAGE_ITEM: 0.4199808, COVERAGE_ITEM_CORRECT: 0.0072762, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0251667, DIVERSITY_GINI: 0.1629373, SHANNON_ENTROPY: 12.1456251, 
+SearchBayesianSkopt: Config 31 is suboptimal. Config: {'learning_rate': 0.004587983931270546, 'nnz': 0.05701857156209546, 'knn': 328} - results: ROC_AUC: 0.0976654, PRECISION: 0.0186517, PRECISION_RECALL_MIN_DEN: 0.0800945, RECALL: 0.0786564, MAP: 0.0346232, MRR: 0.0667103, NDCG: 0.0525745, F1: 0.0301532, HIT_RATE: 0.1865173, ARHR: 0.0720532, NOVELTY: 0.0048331, AVERAGE_POPULARITY: 0.1135241, DIVERSITY_MEAN_INTER_LIST: 0.9807709, DIVERSITY_HERFINDAHL: 0.9980560, COVERAGE_ITEM: 0.3506833, COVERAGE_ITEM_CORRECT: 0.0172089, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0922361, DIVERSITY_GINI: 0.1094834, SHANNON_ENTROPY: 11.1126021, 
+SearchBayesianSkopt: Config 32 is suboptimal. Config: {'learning_rate': 0.028438088824262894, 'nnz': 1.0577438552017218, 'knn': 261} - results: ROC_AUC: 0.0573382, PRECISION: 0.0103381, PRECISION_RECALL_MIN_DEN: 0.0535714, RECALL: 0.0531194, MAP: 0.0219253, MRR: 0.0392762, NDCG: 0.0333263, F1: 0.0173078, HIT_RATE: 0.1033814, ARHR: 0.0409198, NOVELTY: 0.0051427, AVERAGE_POPULARITY: 0.0540322, DIVERSITY_MEAN_INTER_LIST: 0.9960267, DIVERSITY_HERFINDAHL: 0.9995812, COVERAGE_ITEM: 0.4192493, COVERAGE_ITEM_CORRECT: 0.0148989, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0548635, DIVERSITY_GINI: 0.1737191, SHANNON_ENTROPY: 12.3452016, 
+SearchBayesianSkopt: Config 33 is suboptimal. Config: {'learning_rate': 0.05453624934057464, 'nnz': 0.6897904645222018, 'knn': 953} - results: ROC_AUC: 0.0419724, PRECISION: 0.0070213, PRECISION_RECALL_MIN_DEN: 0.0375111, RECALL: 0.0371049, MAP: 0.0168758, MRR: 0.0286712, NDCG: 0.0243299, F1: 0.0118082, HIT_RATE: 0.0702132, ARHR: 0.0295565, NOVELTY: 0.0051258, AVERAGE_POPULARITY: 0.0546132, DIVERSITY_MEAN_INTER_LIST: 0.9951605, DIVERSITY_HERFINDAHL: 0.9994946, COVERAGE_ITEM: 0.4357652, COVERAGE_ITEM_CORRECT: 0.0113571, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0385051, DIVERSITY_GINI: 0.1796086, SHANNON_ENTROPY: 12.3121732, 
+SearchBayesianSkopt: Config 34 is suboptimal. Config: {'learning_rate': 0.018529601095013185, 'nnz': 0.8181830113410775, 'knn': 807} - results: ROC_AUC: 0.0834761, PRECISION: 0.0151195, PRECISION_RECALL_MIN_DEN: 0.0685480, RECALL: 0.0673806, MAP: 0.0298692, MRR: 0.0571716, NDCG: 0.0448715, F1: 0.0246973, HIT_RATE: 0.1511953, ARHR: 0.0606960, NOVELTY: 0.0051254, AVERAGE_POPULARITY: 0.0645616, DIVERSITY_MEAN_INTER_LIST: 0.9941686, DIVERSITY_HERFINDAHL: 0.9993955, COVERAGE_ITEM: 0.3922618, COVERAGE_ITEM_CORRECT: 0.0185948, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0776394, DIVERSITY_GINI: 0.1537192, SHANNON_ENTROPY: 12.0805782, 
+SearchBayesianSkopt: Config 35 is suboptimal. Config: {'learning_rate': 0.05557184813717894, 'nnz': 0.12649253200046975, 'knn': 1782} - results: ROC_AUC: 0.0912604, PRECISION: 0.0168641, PRECISION_RECALL_MIN_DEN: 0.0755824, RECALL: 0.0742989, MAP: 0.0330446, MRR: 0.0642796, NDCG: 0.0496994, F1: 0.0274889, HIT_RATE: 0.1686410, ARHR: 0.0684351, NOVELTY: 0.0049931, AVERAGE_POPULARITY: 0.0838032, DIVERSITY_MEAN_INTER_LIST: 0.9908073, DIVERSITY_HERFINDAHL: 0.9990594, COVERAGE_ITEM: 0.3732435, COVERAGE_ITEM_CORRECT: 0.0187103, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0856927, DIVERSITY_GINI: 0.1330481, SHANNON_ENTROPY: 11.7295465, 
+SearchBayesianSkopt: Config 36 is suboptimal. Config: {'learning_rate': 0.0770453325245325, 'nnz': 0.49016567400065136, 'knn': 1035} - results: ROC_AUC: 0.0389689, PRECISION: 0.0070644, PRECISION_RECALL_MIN_DEN: 0.0376098, RECALL: 0.0373187, MAP: 0.0155890, MRR: 0.0253951, NDCG: 0.0232374, F1: 0.0118799, HIT_RATE: 0.0706440, ARHR: 0.0268412, NOVELTY: 0.0050702, AVERAGE_POPULARITY: 0.0594214, DIVERSITY_MEAN_INTER_LIST: 0.9951585, DIVERSITY_HERFINDAHL: 0.9994944, COVERAGE_ITEM: 0.4278345, COVERAGE_ITEM_CORRECT: 0.0112031, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0372468, DIVERSITY_GINI: 0.1704134, SHANNON_ENTROPY: 12.2304788, 
+SearchBayesianSkopt: Config 37 is suboptimal. Config: {'learning_rate': 0.05636990865620966, 'nnz': 0.8902748995497438, 'knn': 1949} - results: ROC_AUC: 0.0347541, PRECISION: 0.0060521, PRECISION_RECALL_MIN_DEN: 0.0297407, RECALL: 0.0292685, MAP: 0.0124830, MRR: 0.0229631, NDCG: 0.0187749, F1: 0.0100302, HIT_RATE: 0.0605212, ARHR: 0.0236703, NOVELTY: 0.0051384, AVERAGE_POPULARITY: 0.0523228, DIVERSITY_MEAN_INTER_LIST: 0.9954637, DIVERSITY_HERFINDAHL: 0.9995249, COVERAGE_ITEM: 0.4328393, COVERAGE_ITEM_CORRECT: 0.0100096, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0328426, DIVERSITY_GINI: 0.1778436, SHANNON_ENTROPY: 12.3317924, 
+SearchBayesianSkopt: Config 0 Exception. Config: {'nnz': 0.8361999106585656, 'knn': 1405} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 1 Exception. Config: {'nnz': 1.2722992630612104, 'knn': 1669} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 2 Exception. Config: {'nnz': 0.8634564649708927, 'knn': 1879} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 3 Exception. Config: {'nnz': 0.707622507912801, 'knn': 882} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 4 Exception. Config: {'nnz': 0.7368294719471499, 'knn': 1670} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 5 Exception. Config: {'nnz': 1.2850869759319685, 'knn': 94} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 6 Exception. Config: {'nnz': 1.2367678515321359, 'knn': 1740} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 7 Exception. Config: {'nnz': 0.8206316899059867, 'knn': 1746} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 8 Exception. Config: {'nnz': 0.015296854634528904, 'knn': 1644} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 9 Exception. Config: {'nnz': 0.26500700846709374, 'knn': 612} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 10 Exception. Config: {'nnz': 1.1173837000065492, 'knn': 1644} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 11 Exception. Config: {'nnz': 0.08250537695868589, 'knn': 1555} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 12 Exception. Config: {'nnz': 1.300843374199839, 'knn': 154} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 13 Exception. Config: {'nnz': 0.08934377514998572, 'knn': 1454} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 14 Exception. Config: {'nnz': 0.8639884524426709, 'knn': 1159} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 15 Exception. Config: {'nnz': 0.280513682803262, 'knn': 210} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 16 Exception. Config: {'nnz': 1.0760986155890806, 'knn': 1205} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 17 Exception. Config: {'nnz': 0.733209351597938, 'knn': 1229} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 18 Exception. Config: {'nnz': 0.2318354113278714, 'knn': 268} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 19 Exception. Config: {'nnz': 1.8217402354165628, 'knn': 832} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 20 Exception. Config: {'nnz': 1.8240118638258889, 'knn': 1328} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 21 Exception. Config: {'nnz': 0.7170849090803774, 'knn': 889} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 22 Exception. Config: {'nnz': 1.4361304698452284, 'knn': 336} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 23 Exception. Config: {'nnz': 0.48116167145761735, 'knn': 681} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 24 Exception. Config: {'nnz': 0.8495663358376513, 'knn': 262} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 25 Exception. Config: {'nnz': 1.4561411480716855, 'knn': 1793} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 26 Exception. Config: {'nnz': 0.9805646815429561, 'knn': 1554} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 27 Exception. Config: {'nnz': 0.9946392022902315, 'knn': 295} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 28 Exception. Config: {'nnz': 0.9797128391228367, 'knn': 599} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 29 Exception. Config: {'nnz': 1.811504335552989, 'knn': 808} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 30 Exception. Config: {'nnz': 0.7831983513292451, 'knn': 1577} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 31 Exception. Config: {'nnz': 0.125842574519659, 'knn': 1349} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 32 Exception. Config: {'nnz': 1.2296092747807115, 'knn': 551} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 33 Exception. Config: {'nnz': 1.7967174566369413, 'knn': 872} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 34 Exception. Config: {'nnz': 1.6784716473504664, 'knn': 658} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 35 Exception. Config: {'nnz': 0.0765117705573184, 'knn': 912} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 36 Exception. Config: {'nnz': 0.43722114429435244, 'knn': 639} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 37 Exception. Config: {'nnz': 1.5651124637537026, 'knn': 1223} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 38 Exception. Config: {'nnz': 0.6149382741992845, 'knn': 191} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 39 Exception. Config: {'nnz': 0.6934923708605766, 'knn': 1821} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 40 Exception. Config: {'nnz': 0.6088559131530663, 'knn': 1557} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 41 Exception. Config: {'nnz': 1.2143561971554713, 'knn': 1618} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 42 Exception. Config: {'nnz': 1.979060174290623, 'knn': 495} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 43 Exception. Config: {'nnz': 1.3767270736878452, 'knn': 1405} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 44 Exception. Config: {'nnz': 0.7404025342126349, 'knn': 1745} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 45 Exception. Config: {'nnz': 1.73236866420937, 'knn': 1007} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 46 Exception. Config: {'nnz': 1.9912274526244111, 'knn': 367} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 47 Exception. Config: {'nnz': 1.4653647825644058, 'knn': 1204} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 48 Exception. Config: {'nnz': 1.2485735628046197, 'knn': 1020} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 49 Exception. Config: {'nnz': 1.9249742102219989, 'knn': 1113} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 50 Exception. Config: {'nnz': 0.8992257906915548, 'knn': 730} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 51 Exception. Config: {'nnz': 0.07834056874591779, 'knn': 860} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 52 Exception. Config: {'nnz': 1.8570754579011086, 'knn': 1352} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 53 Exception. Config: {'nnz': 1.977621510166516, 'knn': 1439} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 54 Exception. Config: {'nnz': 0.5360947805612052, 'knn': 1780} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 55 Exception. Config: {'nnz': 1.8361672037560424, 'knn': 614} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 56 Exception. Config: {'nnz': 0.3636297152670401, 'knn': 1321} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 57 Exception. Config: {'nnz': 1.816766999809125, 'knn': 549} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 58 Exception. Config: {'nnz': 0.3904174153778176, 'knn': 787} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 59 Exception. Config: {'nnz': 0.008210166381320773, 'knn': 292} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 60 Exception. Config: {'nnz': 0.01425734106313434, 'knn': 2} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 61 Exception. Config: {'nnz': 0.0020757252391920837, 'knn': 10} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 62 Exception. Config: {'nnz': 1.9889204122299189, 'knn': 17} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 63 Exception. Config: {'nnz': 1.9741094929253267, 'knn': 2000} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 64 Exception. Config: {'nnz': 1.9950322248568586, 'knn': 1} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 65 Exception. Config: {'nnz': 0.006170281496029386, 'knn': 28} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 66 Exception. Config: {'nnz': 0.01401183346424029, 'knn': 1983} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 67 Exception. Config: {'nnz': 1.9928864568259332, 'knn': 1991} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 68 Exception. Config: {'nnz': 1.9925817183152086, 'knn': 6} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 69 Exception. Config: {'nnz': 0.012134719030985067, 'knn': 19} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 70 Exception. Config: {'nnz': 1.9975886716493443, 'knn': 2000} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 71 Exception. Config: {'nnz': 0.004067016655297851, 'knn': 1990} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 72 Exception. Config: {'nnz': 1.9936107276478396, 'knn': 23} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 73 Exception. Config: {'nnz': 0.0050329414524655355, 'knn': 26} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 74 Exception. Config: {'nnz': 0.001251675323495315, 'knn': 1990} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 75 Exception. Config: {'nnz': 1.9983175650814409, 'knn': 1992} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 76 Exception. Config: {'nnz': 1.9894560275020605, 'knn': 6} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 77 Exception. Config: {'nnz': 0.002724490170055605, 'knn': 1980} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 78 Exception. Config: {'nnz': 0.017508631970074687, 'knn': 0} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 79 Exception. Config: {'nnz': 1.9792416935188935, 'knn': 1994} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 80 Exception. Config: {'nnz': 1.9972642263364049, 'knn': 17} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 81 Exception. Config: {'nnz': 0.012096487658733283, 'knn': 4} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 82 Exception. Config: {'nnz': 0.0, 'knn': 2000} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: Config 83 Exception. Config: {'nnz': 1.9909345727022614, 'knn': 1998} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() missing 1 required positional argument: 'learning_rate'
+
+SearchBayesianSkopt: New best config found. Config 0: {'nnz': 0.9555934272053397, 'knn': 1415} - results: ROC_AUC: 0.1096400, PRECISION: 0.0203317, PRECISION_RECALL_MIN_DEN: 0.0870193, RECALL: 0.0853386, MAP: 0.0392404, MRR: 0.0751245, NDCG: 0.0585146, F1: 0.0328395, HIT_RATE: 0.2033168, ARHR: 0.0813184, NOVELTY: 0.0048846, AVERAGE_POPULARITY: 0.1078867, DIVERSITY_MEAN_INTER_LIST: 0.9845878, DIVERSITY_HERFINDAHL: 0.9984376, COVERAGE_ITEM: 0.3739750, COVERAGE_ITEM_CORRECT: 0.0199423, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0997861, DIVERSITY_GINI: 0.1272962, SHANNON_ENTROPY: 11.4376676, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'nnz': 0.9555934272053397, 'knn': 1415} - results:
+CUTOFF: 10 - ROC_AUC: 0.1120729, PRECISION: 0.0220092, PRECISION_RECALL_MIN_DEN: 0.0831717, RECALL: 0.0813718, MAP: 0.0369340, MRR: 0.0809473, NDCG: 0.0573353, F1: 0.0346471, HIT_RATE: 0.2200919, ARHR: 0.0890611, NOVELTY: 0.0048934, AVERAGE_POPULARITY: 0.1066193, DIVERSITY_MEAN_INTER_LIST: 0.9849956, DIVERSITY_HERFINDAHL: 0.9984799, COVERAGE_ITEM: 0.3866025, COVERAGE_ITEM_CORRECT: 0.0226756, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1138795, DIVERSITY_GINI: 0.1302178, SHANNON_ENTROPY: 11.4809893, 
+
+SearchBayesianSkopt: New best config found. Config 1: {'nnz': 0.6933162487176278, 'knn': 1210} - results: ROC_AUC: 0.1117541, PRECISION: 0.0210424, PRECISION_RECALL_MIN_DEN: 0.0902498, RECALL: 0.0885594, MAP: 0.0402418, MRR: 0.0772148, NDCG: 0.0602971, F1: 0.0340050, HIT_RATE: 0.2104243, ARHR: 0.0837992, NOVELTY: 0.0048682, AVERAGE_POPULARITY: 0.1119614, DIVERSITY_MEAN_INTER_LIST: 0.9830611, DIVERSITY_HERFINDAHL: 0.9982849, COVERAGE_ITEM: 0.3730510, COVERAGE_ITEM_CORRECT: 0.0205582, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1024286, DIVERSITY_GINI: 0.1246209, SHANNON_ENTROPY: 11.3589912, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'nnz': 0.6933162487176278, 'knn': 1210} - results:
+CUTOFF: 10 - ROC_AUC: 0.1119842, PRECISION: 0.0223487, PRECISION_RECALL_MIN_DEN: 0.0850536, RECALL: 0.0832447, MAP: 0.0368540, MRR: 0.0802697, NDCG: 0.0576573, F1: 0.0352373, HIT_RATE: 0.2234871, ARHR: 0.0885026, NOVELTY: 0.0048762, AVERAGE_POPULARITY: 0.1100999, DIVERSITY_MEAN_INTER_LIST: 0.9837259, DIVERSITY_HERFINDAHL: 0.9983529, COVERAGE_ITEM: 0.3858710, COVERAGE_ITEM_CORRECT: 0.0232146, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1152636, DIVERSITY_GINI: 0.1281732, SHANNON_ENTROPY: 11.4137285, 
+
+SearchBayesianSkopt: Config 2 is suboptimal. Config: {'nnz': 0.6638333186691633, 'knn': 284} - results: ROC_AUC: 0.1121397, PRECISION: 0.0208917, PRECISION_RECALL_MIN_DEN: 0.0891092, RECALL: 0.0874598, MAP: 0.0401451, MRR: 0.0770136, NDCG: 0.0599210, F1: 0.0337269, HIT_RATE: 0.2089166, ARHR: 0.0834076, NOVELTY: 0.0048538, AVERAGE_POPULARITY: 0.1129130, DIVERSITY_MEAN_INTER_LIST: 0.9828411, DIVERSITY_HERFINDAHL: 0.9982629, COVERAGE_ITEM: 0.3689317, COVERAGE_ITEM_CORRECT: 0.0202117, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1030578, DIVERSITY_GINI: 0.1228138, SHANNON_ENTROPY: 11.3325364, 
+SearchBayesianSkopt: Config 3 is suboptimal. Config: {'nnz': 1.7031848521469535, 'knn': 564} - results: ROC_AUC: 0.1072081, PRECISION: 0.0199871, PRECISION_RECALL_MIN_DEN: 0.0855684, RECALL: 0.0838440, MAP: 0.0379867, MRR: 0.0734575, NDCG: 0.0570039, F1: 0.0322793, HIT_RATE: 0.1998708, ARHR: 0.0794517, NOVELTY: 0.0049467, AVERAGE_POPULARITY: 0.0980203, DIVERSITY_MEAN_INTER_LIST: 0.9874511, DIVERSITY_HERFINDAHL: 0.9987238, COVERAGE_ITEM: 0.3792878, COVERAGE_ITEM_CORRECT: 0.0201347, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0986536, DIVERSITY_GINI: 0.1339209, SHANNON_ENTROPY: 11.6062725, 
+SearchBayesianSkopt: Config 4 is suboptimal. Config: {'nnz': 1.7561802191124691, 'knn': 413} - results: ROC_AUC: 0.1073856, PRECISION: 0.0201163, PRECISION_RECALL_MIN_DEN: 0.0865953, RECALL: 0.0848309, MAP: 0.0384076, MRR: 0.0735749, NDCG: 0.0575420, F1: 0.0325208, HIT_RATE: 0.2011630, ARHR: 0.0798718, NOVELTY: 0.0049459, AVERAGE_POPULARITY: 0.0976767, DIVERSITY_MEAN_INTER_LIST: 0.9875740, DIVERSITY_HERFINDAHL: 0.9987361, COVERAGE_ITEM: 0.3800962, COVERAGE_ITEM_CORRECT: 0.0200577, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0982761, DIVERSITY_GINI: 0.1351501, SHANNON_ENTROPY: 11.6209991, 
+SearchBayesianSkopt: Config 5 is suboptimal. Config: {'nnz': 1.7486158579216897, 'knn': 222} - results: ROC_AUC: 0.1082379, PRECISION: 0.0199009, PRECISION_RECALL_MIN_DEN: 0.0863061, RECALL: 0.0845990, MAP: 0.0390464, MRR: 0.0748565, NDCG: 0.0580072, F1: 0.0322220, HIT_RATE: 0.1990093, ARHR: 0.0808413, NOVELTY: 0.0049526, AVERAGE_POPULARITY: 0.0974480, DIVERSITY_MEAN_INTER_LIST: 0.9875815, DIVERSITY_HERFINDAHL: 0.9987369, COVERAGE_ITEM: 0.3800962, COVERAGE_ITEM_CORRECT: 0.0200577, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0984019, DIVERSITY_GINI: 0.1346850, SHANNON_ENTROPY: 11.6212172, 
+SearchBayesianSkopt: Config 6 is suboptimal. Config: {'nnz': 0.2169802463734461, 'knn': 1234} - results: ROC_AUC: 0.1110972, PRECISION: 0.0201163, PRECISION_RECALL_MIN_DEN: 0.0867853, RECALL: 0.0852664, MAP: 0.0393539, MRR: 0.0761682, NDCG: 0.0586588, F1: 0.0325527, HIT_RATE: 0.2011630, ARHR: 0.0820787, NOVELTY: 0.0048117, AVERAGE_POPULARITY: 0.1181832, DIVERSITY_MEAN_INTER_LIST: 0.9805880, DIVERSITY_HERFINDAHL: 0.9980377, COVERAGE_ITEM: 0.3568046, COVERAGE_ITEM_CORRECT: 0.0189413, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1005411, DIVERSITY_GINI: 0.1134896, SHANNON_ENTROPY: 11.1658921, 
+SearchBayesianSkopt: Config 7 is suboptimal. Config: {'nnz': 0.0687087509172133, 'knn': 333} - results: ROC_AUC: 0.1037748, PRECISION: 0.0194702, PRECISION_RECALL_MIN_DEN: 0.0829425, RECALL: 0.0814122, MAP: 0.0361819, MRR: 0.0700650, NDCG: 0.0548523, F1: 0.0314249, HIT_RATE: 0.1947017, ARHR: 0.0758737, NOVELTY: 0.0048206, AVERAGE_POPULARITY: 0.1161196, DIVERSITY_MEAN_INTER_LIST: 0.9800797, DIVERSITY_HERFINDAHL: 0.9979869, COVERAGE_ITEM: 0.3508758, COVERAGE_ITEM_CORRECT: 0.0178633, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0955077, DIVERSITY_GINI: 0.1089445, SHANNON_ENTROPY: 11.0881837, 
+SearchBayesianSkopt: Config 8 is suboptimal. Config: {'nnz': 0.7296269230167148, 'knn': 242} - results: ROC_AUC: 0.1142182, PRECISION: 0.0208271, PRECISION_RECALL_MIN_DEN: 0.0891214, RECALL: 0.0874815, MAP: 0.0402025, MRR: 0.0778731, NDCG: 0.0601636, F1: 0.0336443, HIT_RATE: 0.2082705, ARHR: 0.0839626, NOVELTY: 0.0048665, AVERAGE_POPULARITY: 0.1118504, DIVERSITY_MEAN_INTER_LIST: 0.9832454, DIVERSITY_HERFINDAHL: 0.9983034, COVERAGE_ITEM: 0.3687007, COVERAGE_ITEM_CORRECT: 0.0201347, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1033094, DIVERSITY_GINI: 0.1238298, SHANNON_ENTROPY: 11.3650322, 
+SearchBayesianSkopt: Config 9 is suboptimal. Config: {'nnz': 0.9530501183003812, 'knn': 694} - results: ROC_AUC: 0.1113784, PRECISION: 0.0208917, PRECISION_RECALL_MIN_DEN: 0.0897204, RECALL: 0.0879771, MAP: 0.0394063, MRR: 0.0755256, NDCG: 0.0593793, F1: 0.0337652, HIT_RATE: 0.2089166, ARHR: 0.0818715, NOVELTY: 0.0048874, AVERAGE_POPULARITY: 0.1081442, DIVERSITY_MEAN_INTER_LIST: 0.9845131, DIVERSITY_HERFINDAHL: 0.9984301, COVERAGE_ITEM: 0.3745910, COVERAGE_ITEM_CORRECT: 0.0204042, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1024286, DIVERSITY_GINI: 0.1273896, SHANNON_ENTROPY: 11.4379179, 
+SearchBayesianSkopt: Config 10 is suboptimal. Config: {'nnz': 1.9856497956698334, 'knn': 1852} - results: ROC_AUC: 0.1061440, PRECISION: 0.0198148, PRECISION_RECALL_MIN_DEN: 0.0853034, RECALL: 0.0835474, MAP: 0.0388950, MRR: 0.0737835, NDCG: 0.0574982, F1: 0.0320325, HIT_RATE: 0.1981477, ARHR: 0.0798736, NOVELTY: 0.0049621, AVERAGE_POPULARITY: 0.0948501, DIVERSITY_MEAN_INTER_LIST: 0.9882950, DIVERSITY_HERFINDAHL: 0.9988082, COVERAGE_ITEM: 0.3854475, COVERAGE_ITEM_CORRECT: 0.0200577, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0971436, DIVERSITY_GINI: 0.1383047, SHANNON_ENTROPY: 11.6770279, 
+SearchBayesianSkopt: New best config found. Config 11: {'nnz': 0.39651777555716483, 'knn': 1680} - results: ROC_AUC: 0.1134764, PRECISION: 0.0210640, PRECISION_RECALL_MIN_DEN: 0.0909534, RECALL: 0.0893673, MAP: 0.0404970, MRR: 0.0777214, NDCG: 0.0607267, F1: 0.0340923, HIT_RATE: 0.2106397, ARHR: 0.0835499, NOVELTY: 0.0048303, AVERAGE_POPULARITY: 0.1169560, DIVERSITY_MEAN_INTER_LIST: 0.9812724, DIVERSITY_HERFINDAHL: 0.9981061, COVERAGE_ITEM: 0.3630799, COVERAGE_ITEM_CORRECT: 0.0199808, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1041903, DIVERSITY_GINI: 0.1182945, SHANNON_ENTROPY: 11.2469350, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'nnz': 0.39651777555716483, 'knn': 1680} - results:
+CUTOFF: 10 - ROC_AUC: 0.1136617, PRECISION: 0.0221290, PRECISION_RECALL_MIN_DEN: 0.0858966, RECALL: 0.0841507, MAP: 0.0378038, MRR: 0.0813222, NDCG: 0.0586501, F1: 0.0350429, HIT_RATE: 0.2212902, ARHR: 0.0893374, NOVELTY: 0.0048406, AVERAGE_POPULARITY: 0.1149166, DIVERSITY_MEAN_INTER_LIST: 0.9820359, DIVERSITY_HERFINDAHL: 0.9981840, COVERAGE_ITEM: 0.3755534, COVERAGE_ITEM_CORRECT: 0.0223292, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1145086, DIVERSITY_GINI: 0.1218166, SHANNON_ENTROPY: 11.3055764, 
+
+SearchBayesianSkopt: Config 12 is suboptimal. Config: {'nnz': 1.236707494337538, 'knn': 716} - results: ROC_AUC: 0.1108991, PRECISION: 0.0204178, PRECISION_RECALL_MIN_DEN: 0.0880487, RECALL: 0.0863015, MAP: 0.0398349, MRR: 0.0762508, NDCG: 0.0592148, F1: 0.0330229, HIT_RATE: 0.2041783, ARHR: 0.0826351, NOVELTY: 0.0049118, AVERAGE_POPULARITY: 0.1043347, DIVERSITY_MEAN_INTER_LIST: 0.9857310, DIVERSITY_HERFINDAHL: 0.9985519, COVERAGE_ITEM: 0.3764774, COVERAGE_ITEM_CORRECT: 0.0199423, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1005411, DIVERSITY_GINI: 0.1304848, SHANNON_ENTROPY: 11.5112854, 
+SearchBayesianSkopt: Config 13 is suboptimal. Config: {'nnz': 1.7433513351499246, 'knn': 372} - results: ROC_AUC: 0.1076041, PRECISION: 0.0200948, PRECISION_RECALL_MIN_DEN: 0.0864479, RECALL: 0.0846705, MAP: 0.0393150, MRR: 0.0747023, NDCG: 0.0582283, F1: 0.0324809, HIT_RATE: 0.2009477, ARHR: 0.0810121, NOVELTY: 0.0049454, AVERAGE_POPULARITY: 0.0977953, DIVERSITY_MEAN_INTER_LIST: 0.9875468, DIVERSITY_HERFINDAHL: 0.9987334, COVERAGE_ITEM: 0.3823677, COVERAGE_ITEM_CORRECT: 0.0202502, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0980244, DIVERSITY_GINI: 0.1357870, SHANNON_ENTROPY: 11.6243675, 
+SearchBayesianSkopt: Config 14 is suboptimal. Config: {'nnz': 1.3848629014504283, 'knn': 300} - results: ROC_AUC: 0.1082375, PRECISION: 0.0205255, PRECISION_RECALL_MIN_DEN: 0.0876497, RECALL: 0.0859241, MAP: 0.0392550, MRR: 0.0753026, NDCG: 0.0586215, F1: 0.0331356, HIT_RATE: 0.2052552, ARHR: 0.0819504, NOVELTY: 0.0049155, AVERAGE_POPULARITY: 0.1021439, DIVERSITY_MEAN_INTER_LIST: 0.9864095, DIVERSITY_HERFINDAHL: 0.9986197, COVERAGE_ITEM: 0.3776708, COVERAGE_ITEM_CORRECT: 0.0203272, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1001636, DIVERSITY_GINI: 0.1311415, SHANNON_ENTROPY: 11.5412650, 
+SearchBayesianSkopt: Config 15 is suboptimal. Config: {'nnz': 0.7640822354545447, 'knn': 228} - results: ROC_AUC: 0.1131944, PRECISION: 0.0209347, PRECISION_RECALL_MIN_DEN: 0.0897969, RECALL: 0.0881229, MAP: 0.0403327, MRR: 0.0768572, NDCG: 0.0602424, F1: 0.0338322, HIT_RATE: 0.2093474, ARHR: 0.0830828, NOVELTY: 0.0048753, AVERAGE_POPULARITY: 0.1111221, DIVERSITY_MEAN_INTER_LIST: 0.9834274, DIVERSITY_HERFINDAHL: 0.9983216, COVERAGE_ITEM: 0.3725890, COVERAGE_ITEM_CORRECT: 0.0204042, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1030578, DIVERSITY_GINI: 0.1259662, SHANNON_ENTROPY: 11.3878337, 
+SearchBayesianSkopt: Config 16 is suboptimal. Config: {'nnz': 1.13069280901091, 'knn': 290} - results: ROC_AUC: 0.1100477, PRECISION: 0.0204824, PRECISION_RECALL_MIN_DEN: 0.0883249, RECALL: 0.0866404, MAP: 0.0387193, MRR: 0.0745645, NDCG: 0.0584368, F1: 0.0331322, HIT_RATE: 0.2048245, ARHR: 0.0806652, NOVELTY: 0.0049038, AVERAGE_POPULARITY: 0.1052597, DIVERSITY_MEAN_INTER_LIST: 0.9853828, DIVERSITY_HERFINDAHL: 0.9985171, COVERAGE_ITEM: 0.3757844, COVERAGE_ITEM_CORRECT: 0.0202887, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1014219, DIVERSITY_GINI: 0.1294491, SHANNON_ENTROPY: 11.4877264, 
+SearchBayesianSkopt: Config 17 is suboptimal. Config: {'nnz': 1.3774515166662744, 'knn': 710} - results: ROC_AUC: 0.1100728, PRECISION: 0.0201809, PRECISION_RECALL_MIN_DEN: 0.0869555, RECALL: 0.0852395, MAP: 0.0393015, MRR: 0.0755895, NDCG: 0.0585073, F1: 0.0326353, HIT_RATE: 0.2018092, ARHR: 0.0816955, NOVELTY: 0.0049207, AVERAGE_POPULARITY: 0.1023561, DIVERSITY_MEAN_INTER_LIST: 0.9863136, DIVERSITY_HERFINDAHL: 0.9986101, COVERAGE_ITEM: 0.3760924, COVERAGE_ITEM_CORRECT: 0.0199038, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0992827, DIVERSITY_GINI: 0.1312796, SHANNON_ENTROPY: 11.5396020, 
+SearchBayesianSkopt: Config 18 is suboptimal. Config: {'nnz': 0.626222001833031, 'knn': 1576} - results: ROC_AUC: 0.1126306, PRECISION: 0.0208917, PRECISION_RECALL_MIN_DEN: 0.0896262, RECALL: 0.0879271, MAP: 0.0397184, MRR: 0.0768346, NDCG: 0.0597625, F1: 0.0337615, HIT_RATE: 0.2089166, ARHR: 0.0829949, NOVELTY: 0.0048508, AVERAGE_POPULARITY: 0.1142182, DIVERSITY_MEAN_INTER_LIST: 0.9823952, DIVERSITY_HERFINDAHL: 0.9982184, COVERAGE_ITEM: 0.3676612, COVERAGE_ITEM_CORRECT: 0.0199808, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1035611, DIVERSITY_GINI: 0.1214486, SHANNON_ENTROPY: 11.3105586, 
+SearchBayesianSkopt: Config 19 is suboptimal. Config: {'nnz': 1.1265018843531032, 'knn': 993} - results: ROC_AUC: 0.1093864, PRECISION: 0.0203532, PRECISION_RECALL_MIN_DEN: 0.0871624, RECALL: 0.0854469, MAP: 0.0391988, MRR: 0.0754602, NDCG: 0.0584875, F1: 0.0328756, HIT_RATE: 0.2035322, ARHR: 0.0817509, NOVELTY: 0.0049006, AVERAGE_POPULARITY: 0.1054559, DIVERSITY_MEAN_INTER_LIST: 0.9853607, DIVERSITY_HERFINDAHL: 0.9985148, COVERAGE_ITEM: 0.3748219, COVERAGE_ITEM_CORRECT: 0.0200192, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1002894, DIVERSITY_GINI: 0.1291458, SHANNON_ENTROPY: 11.4836262, 
+SearchBayesianSkopt: Config 20 is suboptimal. Config: {'nnz': 1.4101431685319292, 'knn': 1344} - results: ROC_AUC: 0.1091262, PRECISION: 0.0201163, PRECISION_RECALL_MIN_DEN: 0.0866796, RECALL: 0.0849521, MAP: 0.0391341, MRR: 0.0751786, NDCG: 0.0582613, F1: 0.0325297, HIT_RATE: 0.2011630, ARHR: 0.0815791, NOVELTY: 0.0049222, AVERAGE_POPULARITY: 0.1017162, DIVERSITY_MEAN_INTER_LIST: 0.9864659, DIVERSITY_HERFINDAHL: 0.9986253, COVERAGE_ITEM: 0.3782098, COVERAGE_ITEM_CORRECT: 0.0197113, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1319182, SHANNON_ENTROPY: 11.5504617, 
+SearchBayesianSkopt: Config 21 is suboptimal. Config: {'nnz': 0.18968050242468643, 'knn': 1285} - results: ROC_AUC: 0.1105740, PRECISION: 0.0208271, PRECISION_RECALL_MIN_DEN: 0.0897461, RECALL: 0.0881202, MAP: 0.0402779, MRR: 0.0766940, NDCG: 0.0600812, F1: 0.0336912, HIT_RATE: 0.2082705, ARHR: 0.0830698, NOVELTY: 0.0048120, AVERAGE_POPULARITY: 0.1185001, DIVERSITY_MEAN_INTER_LIST: 0.9805492, DIVERSITY_HERFINDAHL: 0.9980338, COVERAGE_ITEM: 0.3608855, COVERAGE_ITEM_CORRECT: 0.0192878, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1019253, DIVERSITY_GINI: 0.1144238, SHANNON_ENTROPY: 11.1740886, 
+SearchBayesianSkopt: Config 22 is suboptimal. Config: {'nnz': 1.0326455190146124, 'knn': 1492} - results: ROC_AUC: 0.1109592, PRECISION: 0.0206332, PRECISION_RECALL_MIN_DEN: 0.0894380, RECALL: 0.0877601, MAP: 0.0390507, MRR: 0.0758168, NDCG: 0.0590423, F1: 0.0334112, HIT_RATE: 0.2063321, ARHR: 0.0819171, NOVELTY: 0.0048885, AVERAGE_POPULARITY: 0.1069910, DIVERSITY_MEAN_INTER_LIST: 0.9848478, DIVERSITY_HERFINDAHL: 0.9984636, COVERAGE_ITEM: 0.3725120, COVERAGE_ITEM_CORRECT: 0.0203272, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1017994, DIVERSITY_GINI: 0.1271692, SHANNON_ENTROPY: 11.4483894, 
+SearchBayesianSkopt: Config 23 is suboptimal. Config: {'nnz': 0.12365263698833509, 'knn': 1505} - results: ROC_AUC: 0.1061839, PRECISION: 0.0198579, PRECISION_RECALL_MIN_DEN: 0.0855446, RECALL: 0.0840103, MAP: 0.0383232, MRR: 0.0727841, NDCG: 0.0572725, F1: 0.0321227, HIT_RATE: 0.1985785, ARHR: 0.0784247, NOVELTY: 0.0048152, AVERAGE_POPULARITY: 0.1175221, DIVERSITY_MEAN_INTER_LIST: 0.9804438, DIVERSITY_HERFINDAHL: 0.9980233, COVERAGE_ITEM: 0.3555342, COVERAGE_ITEM_CORRECT: 0.0183253, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0986536, DIVERSITY_GINI: 0.1122275, SHANNON_ENTROPY: 11.1497119, 
+SearchBayesianSkopt: Config 24 is suboptimal. Config: {'nnz': 1.568428085564041, 'knn': 666} - results: ROC_AUC: 0.1082708, PRECISION: 0.0199871, PRECISION_RECALL_MIN_DEN: 0.0853004, RECALL: 0.0836088, MAP: 0.0384783, MRR: 0.0747435, NDCG: 0.0574787, F1: 0.0322618, HIT_RATE: 0.1998708, ARHR: 0.0808766, NOVELTY: 0.0049370, AVERAGE_POPULARITY: 0.0996345, DIVERSITY_MEAN_INTER_LIST: 0.9870440, DIVERSITY_HERFINDAHL: 0.9986831, COVERAGE_ITEM: 0.3793648, COVERAGE_ITEM_CORRECT: 0.0200192, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0984019, DIVERSITY_GINI: 0.1337640, SHANNON_ENTROPY: 11.5900595, 
+SearchBayesianSkopt: Config 25 is suboptimal. Config: {'nnz': 0.6125927482366281, 'knn': 916} - results: ROC_AUC: 0.1112788, PRECISION: 0.0207840, PRECISION_RECALL_MIN_DEN: 0.0887931, RECALL: 0.0871712, MAP: 0.0393098, MRR: 0.0754882, NDCG: 0.0591788, F1: 0.0335651, HIT_RATE: 0.2078398, ARHR: 0.0816231, NOVELTY: 0.0048526, AVERAGE_POPULARITY: 0.1140929, DIVERSITY_MEAN_INTER_LIST: 0.9823742, DIVERSITY_HERFINDAHL: 0.9982163, COVERAGE_ITEM: 0.3658133, COVERAGE_ITEM_CORRECT: 0.0199808, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1025544, DIVERSITY_GINI: 0.1218364, SHANNON_ENTROPY: 11.3175520, 
+SearchBayesianSkopt: Config 26 is suboptimal. Config: {'nnz': 0.7494783376948094, 'knn': 286} - results: ROC_AUC: 0.1124153, PRECISION: 0.0208271, PRECISION_RECALL_MIN_DEN: 0.0888875, RECALL: 0.0872109, MAP: 0.0398152, MRR: 0.0768955, NDCG: 0.0596307, F1: 0.0336242, HIT_RATE: 0.2082705, ARHR: 0.0832813, NOVELTY: 0.0048683, AVERAGE_POPULARITY: 0.1114455, DIVERSITY_MEAN_INTER_LIST: 0.9832873, DIVERSITY_HERFINDAHL: 0.9983075, COVERAGE_ITEM: 0.3705101, COVERAGE_ITEM_CORRECT: 0.0202117, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1023028, DIVERSITY_GINI: 0.1243124, SHANNON_ENTROPY: 11.3658444, 
+SearchBayesianSkopt: Config 27 is suboptimal. Config: {'nnz': 1.928521635135226, 'knn': 325} - results: ROC_AUC: 0.1080351, PRECISION: 0.0199225, PRECISION_RECALL_MIN_DEN: 0.0856186, RECALL: 0.0839382, MAP: 0.0392399, MRR: 0.0751831, NDCG: 0.0580671, F1: 0.0322019, HIT_RATE: 0.1992246, ARHR: 0.0812581, NOVELTY: 0.0049581, AVERAGE_POPULARITY: 0.0960424, DIVERSITY_MEAN_INTER_LIST: 0.9879743, DIVERSITY_HERFINDAHL: 0.9987762, COVERAGE_ITEM: 0.3839076, COVERAGE_ITEM_CORRECT: 0.0199423, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0980244, DIVERSITY_GINI: 0.1366237, SHANNON_ENTROPY: 11.6514031, 
+SearchBayesianSkopt: Config 28 is suboptimal. Config: {'nnz': 0.21912582006771492, 'knn': 440} - results: ROC_AUC: 0.1113591, PRECISION: 0.0210209, PRECISION_RECALL_MIN_DEN: 0.0918091, RECALL: 0.0902096, MAP: 0.0394310, MRR: 0.0760811, NDCG: 0.0599638, F1: 0.0340965, HIT_RATE: 0.2102089, ARHR: 0.0817481, NOVELTY: 0.0048087, AVERAGE_POPULARITY: 0.1188057, DIVERSITY_MEAN_INTER_LIST: 0.9804627, DIVERSITY_HERFINDAHL: 0.9980252, COVERAGE_ITEM: 0.3585756, COVERAGE_ITEM_CORRECT: 0.0201732, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1045678, DIVERSITY_GINI: 0.1139730, SHANNON_ENTROPY: 11.1708601, 
+SearchBayesianSkopt: Config 29 is suboptimal. Config: {'nnz': 1.3700009091915881, 'knn': 1725} - results: ROC_AUC: 0.1092938, PRECISION: 0.0205040, PRECISION_RECALL_MIN_DEN: 0.0883590, RECALL: 0.0865846, MAP: 0.0398780, MRR: 0.0757906, NDCG: 0.0592296, F1: 0.0331563, HIT_RATE: 0.2050398, ARHR: 0.0821939, NOVELTY: 0.0049181, AVERAGE_POPULARITY: 0.1024681, DIVERSITY_MEAN_INTER_LIST: 0.9862672, DIVERSITY_HERFINDAHL: 0.9986055, COVERAGE_ITEM: 0.3770164, COVERAGE_ITEM_CORRECT: 0.0202117, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1005411, DIVERSITY_GINI: 0.1311297, SHANNON_ENTROPY: 11.5368467, 
+SearchBayesianSkopt: Config 30 is suboptimal. Config: {'nnz': 1.7771001478022241, 'knn': 810} - results: ROC_AUC: 0.1069575, PRECISION: 0.0200732, PRECISION_RECALL_MIN_DEN: 0.0862570, RECALL: 0.0845357, MAP: 0.0381898, MRR: 0.0738747, NDCG: 0.0573959, F1: 0.0324428, HIT_RATE: 0.2007323, ARHR: 0.0800355, NOVELTY: 0.0049568, AVERAGE_POPULARITY: 0.0969340, DIVERSITY_MEAN_INTER_LIST: 0.9877351, DIVERSITY_HERFINDAHL: 0.9987522, COVERAGE_ITEM: 0.3812897, COVERAGE_ITEM_CORRECT: 0.0200577, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0984019, DIVERSITY_GINI: 0.1355685, SHANNON_ENTROPY: 11.6337044, 
